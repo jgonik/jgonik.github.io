@@ -4,20 +4,28 @@
   <link rel="stylesheet" href="index.css">
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
   <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- Side navbar -->
   <div class="sidenav">
     <h1>Julia</h1>
-    <a href="#">About</a>
-    <a href="#">Projects</a>
-    <a href="#">Publications</a>
+    <a href="#me">About</a>
+    <a href="#project-header">Projects</a>
+    <a href="#publication-header">Publications</a>
+    <hr class="line">
+    <div class="row">
+      <div class="column"><a href="mailto:jgonik@mit.edu"><img class="icon" src="email.png"></a></div>
+      <div class="column"><a href="https://github.com/jgonik"><img class="icon" src="github.png"></a></div>
+      <div class="column"><a href="https://www.linkedin.com/in/julia-gonik-44813917a/"><img class="icon" src="linkedin.png"></a></div>
+    </div>
+    <p id="copyright">&copy Julia Gonik 2020</p>
   </div>
   <div class="main">
     <div class="intro">
       <img id="me" src="pfp.jpg" alt="Me!">
       <h1>Julia Gonik</h1>
-      <p class="about">Hi! I'm Julia, and I'm an undergraduate studying computer science and math with a focus on machine learning at MIT.</p>
+      <p class="about">Hi! I'm Julia, and I'm an undergraduate at MIT studying computer science and math with a focus on machine learning.</p>
       <p class="about">I'm particularly interested in reinforcement learning (RL) and its applications for building
         autonomous and intelligent agents, robots, and machines. I've also studied NLP, computer vision, and deep generative networks with
         applications in robotics and cybersecurity.
@@ -32,10 +40,67 @@
         Outside of schoolwork, I'm the current head of logistics for HackMIT's Blueprint. I'm also the Vice President of Chapter Relations and Standards of Alpha Chi Omega at MIT.
       </p>
       <p class="about">
-        In my free time, I enjoy weightlifting, swimming, hiking, reading, creating digitial art, and bothering my cat Emerson.
+        In my free time, I enjoy weightlifting, swimming, hiking, reading, creating digital art, and bothering my cat Emerson.
       </p>
     </div>
+    <div class="projects" id="project-header">
+      <h1>Projects</h1>
+      <div class="project" data-aos="fade-up">
+        <img class="image" src="car-racing.png" alt="The OpenAI Gym CarRacing environment.">
+        <h2>Multi-Agent Cooperative Car Racing</h2>
+        <h3>September 2020 - Present</h3>
+        <p class="project-text">I'm working on adapating the OpenAI Gym car racing environment to support multi-agent team racing. The goal is to analyze the collaborative strategies that the agents learn.</p>
+      </div>
+
+      <div class="project" data-aos="fade-up">
+        <img class="image" src="football.png" alt="A screenshot of the Google Research football environment.">
+        <h2>Training Dreamer on Google Research Football</h2>
+        <h3>Fall 2020</h3>
+        <p class="project-text">As my final project for 6.867 (Graduate Machine Learning), my group and I trained the Dreamer RL algorithm on the Google Research football environment. Our agent achieved promising results with limited training time.</p>
+      </div>
+
+      <div class="project" data-aos="fade-up">
+        <img class="image" src="playground.png" alt="A screenshot of playground.">
+        <h2><a class="link" href="https://github.com/hackmit/playground" target="_blank">Playground</a></h2>
+        <h3>Summer 2020</h3>
+        <p class="project-text">As a developer for HackMIT, I contributed to Playground, a Club-Penguin-style virtual world used during our 2020 event. I mainly worked on Jukebox, which allowed users to synchronously listen to music on the platform.</p>
+      </div>
+
+      <div class="project" data-aos="fade-up">
+        <img class="image" src="urop.jpeg" alt="An image of Stata Center from my robot.">
+        <h2>Zero-Shot Imitation Learning</h2>
+        <h3>October 2019 - June 2020</h3>
+        <p class="project-text">During my sophomore year at MIT, I was an undergraduate researcher with Professor Pulkit Agrawal of CSAIL. I worked on training a small robot to autonomously navigate using independently collected image data of its environment.</p>
+      </div>
+
+      <div class="project" data-aos="fade-up">
+        <img class="image" src="grail.jpg" alt="Military computers.">
+        <h2><a class="link" href="https://www.darpa.mil/news-events/2020-03-19a" target="_blank">GRAIL</a></h2>
+        <h3>Summer 2019</h3>
+        <p class="project-text">During my time at Raytheon BBN Technologies, I worked on GRAIL, which is a system for grayzone warfare planning. I designed the database structure and worked on anomaly detection for noisy real-world data.</p>
+      </div>
+
+      <div class="project" data-aos="fade-up">
+        <img class="image" src="laserharp.png" alt="Our laser harp apparatus.">
+        <h2><a class="link" href="https://vimeo.com/336696777" target="_blank">Laser Harp Guitar Hero</a></h2>
+        <h3>Spring 2019</h3>
+        <p class="project-text">As my final project for 6.08 (Embedded Systems), my group and I designed and built a fully functional laser harp video game in the style of Guitar Hero.</p>
+      </div>
+    </div>
+    <div class="publications" id="publication-header">
+      <h1>Publications</h1>
+      <div class="project" data-aos="fade-up">
+        <img class="image" src="nasa.png" alt="A screenshot of the Google Research football environment.">
+        <h2><a class="link" href="https://arc.aiaa.org/doi/abs/10.2514/6.2020-4117" target="_blank">CyberGAN</a></h2>
+        <h3>Summer & Fall 2020</h3>
+        <p class="project-text">As an intern with NASA JPL, my collaborators and I designed a novel Generative Adversarial Network (GAN) in order to produce high-fidelity cybersecurity data. Our realistic data can be reliably used to augment existing datasets and test machine learning applications in cybersecurity.</p>
+      </div>
+    </div>
   </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script scr="index.js"></script>
 </body>
